@@ -1,0 +1,613 @@
+/* Index Page Styling */
+
+/* Universal Styling */
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+/* Navigation Bar - START */
+.navigationBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+}
+
+.navigationBar {
+    display: flex;
+}
+
+/* AM Logo */
+.AMlogo {
+    width: 30%;
+    margin-left: 40px;
+    position: relative;
+}
+
+/* Tabs Styling */
+
+
+.about {
+    margin-right: 180px;
+}
+
+.email {
+    margin-right: 60px;
+}
+
+#main,
+#projects,
+#about,
+#email {
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: baseline;
+    letter-spacing: -0.5px;
+    word-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    text-transform: none;
+    text-decoration: none solid #000000;
+    text-align: left;
+    text-indent: 0px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#main::after,
+#projects::after,
+#about::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #000000;
+    bottom: -8px;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+#main:hover::after,
+#projects:hover::after,
+#about:hover::after {
+    width: 100%;
+    transition: width 0.4s ease;
+    transform-origin: left;
+}
+
+#email::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    bottom: -8px;
+    left: 0;
+    transition: width 0.6s ease, opacity 0.6s ease;
+}
+
+#email:hover::before {
+    width: 0;
+    opacity: 0;
+    transition: none;
+    /* Disable the transition during hover */
+    animation: showLine 0.6s ease forwards;
+    /* Apply the animation after the hover transition */
+}
+
+@keyframes showLine {
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* Navigation Bar - END */
+
+/* Main Content Styling - START */
+.headingContainer {
+    margin-left: 22px;
+    padding: 22px;
+}
+
+#headingNameAndPosition {
+    /* font styling */
+    font-family: Inter;
+    font-size: 123px;
+    font-weight: 700;
+    text-align: left;
+    text-indent: 0px;
+    line-height: 110.7px;
+    letter-spacing: -4px;
+    word-spacing: 0px;
+}
+
+#headingTagLine {
+    margin-top: 2%;
+    /* font styling */
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: start;
+    text-indent: 0px;
+    line-height: 47px;
+    letter-spacing: -1.3px;
+    word-spacing: 0px;
+}
+
+#headingNameAndPosition,
+#headingTagLine {
+    position: relative;
+    font-style: normal;
+    font-variant: normal;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: none;
+    text-decoration: none solid #000000;
+}
+
+/* Button Styling */
+.buttons {
+    margin-top: 2%;
+    text-align: left;
+}
+
+.fill-btn {
+    position: relative;
+    padding: 30px 60px;
+    /* button size */
+    width: 15%;
+    color: #000000;
+    font-weight: bold;
+    background: linear-gradient(to top, #ffffff 50%, #000000 50%);
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    outline: 2px solid #000000;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 30px;
+    transition: background-position 0.5s;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    white-space: nowrap;
+    /* Ensure text stays in one line */
+}
+
+.buttons .fill-btn .btn-text a {
+    text-decoration: none;
+    color: inherit;
+    /* Optionally, set the color to inherit from the parent */
+}
+
+.fill-btn .btn-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fill-btn {
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: baseline;
+    letter-spacing: -0.5px;
+    word-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.fill-btn .hide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fill-btn:hover {
+    background-position: 0% 0%;
+}
+
+.fill-btn:hover .btn-text {
+    opacity: 0;
+}
+
+.fill-btn:hover .hide {
+    opacity: 1;
+}
+
+/* Project Content - START */
+#recentWork {
+    margin-top: 10%;
+    margin-left: 22px;
+    padding: 22px;
+    /* font styling */
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: baseline;
+    letter-spacing: -0.5px;
+    word-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    text-transform: none;
+    text-decoration: none solid #000000;
+    text-align: left;
+    text-indent: 0px;
+    position: relative;
+}
+
+/* FlexWorkspace Website */
+.firstProject {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#flexworkspace {
+    width: 95%;
+    height: 900px;
+    object-fit: cover;
+    margin-top: 1%;
+    border-radius: 15px;
+}
+
+/* TO DO - create a cursor for FlexWorkspace Website */
+.flexworkspace a:hover {
+    /* cursor: url('https://via.placeholder.com/30x30'), auto; */
+    cursor: url('C:\Users\marie\Downloads\viewcase.png'), auto;
+}
+
+.flexworkspaceDetails {
+    display: flex;
+    margin-bottom: 10%;
+}
+
+#flexworkspaceWebsiteName,
+#flexworkspaceName,
+#flexworkspaceYear {
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: baseline;
+    letter-spacing: -0.5px;
+    word-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    text-transform: none;
+    text-decoration: none solid #000000;
+    text-align: left;
+    text-indent: 0px;
+    position: relative;
+}
+
+#flexworkspaceWebsiteName {
+    margin-left: 2%;
+    padding: 22px;
+}
+
+#flexworkspaceName,
+#flexworkspaceYear {
+    margin-left: 10%;
+    padding: 22px;
+}
+
+/* BVConnect Mobile App */
+.secondProject {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#bvconnectapp {
+    width: 95%;
+    height: 900px;
+    object-fit: cover;
+    margin-top: 1%;
+    border-radius: 15px;
+}
+
+.bvconnectappDetails {
+    display: flex;
+}
+
+
+
+#bvconnectMobileAppName,
+#bvconnectappName,
+#bvconnectappYear {
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: baseline;
+    letter-spacing: -0.5px;
+    word-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    text-transform: none;
+    text-decoration: none solid #000000;
+    text-align: left;
+    text-indent: 0px;
+    position: relative;
+}
+
+#bvconnectMobileAppName
+{
+    margin-left: 2%;
+    padding: 22px;
+}
+
+#bvconnectappName,
+#bvconnectappYear {
+    margin-left: 10%;
+    padding: 22px;
+}
+
+/* Project Content - END */
+
+/* List Section - START*/
+.list1,
+.list2 {
+    padding: 22px;
+}
+
+.listContainer1 {
+    display: flex;
+    margin-top: 10%;
+}
+
+.listContainer2 {
+    display: flex;
+    margin-top: 10%;
+}
+
+#task1,
+#task2,
+#list1,
+#list2 {
+    font-size: 24px;
+    line-height: 5;
+    vertical-align: baseline;
+    letter-spacing: -0.5px;
+    word-spacing: 0px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 40px;
+    /* font styling */
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: none;
+    text-decoration: none solid #000000;
+    text-align: left;
+    text-indent: 0px;
+}
+
+#taskDescription1,
+#taskDescription2 {
+    font-family: Inter;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: -1.3px;
+    word-spacing: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* font styling */
+    font-weight: 500;
+    text-align: start;
+    text-indent: 0px;
+    margin-top: 40px;
+    margin-left: 420px;
+}
+
+#listDescription1,
+#listDescription2 {
+    font-family: Inter;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: -1.3px;
+    word-spacing: 0px;
+    margin: 0px;
+    padding: 0px;
+    /* font styling */
+    font-weight: 500;
+    text-align: start;
+    text-indent: 0px;
+    margin-left: 420px;
+    margin-top: 40px;
+}
+/* List Section - END */
+
+/* Button Styling - second one */
+.buttons2 {
+    margin-top: 50px;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.buttons2 .fill-btn2 .btn-text2 a {
+    text-decoration: none;
+    color: inherit;
+    /* Optionally, set the color to inherit from the parent */
+}
+
+.fill-btn2 {
+    position: relative;
+    padding: 30px 135px;
+    /* button size */
+    width: 15%;
+    color: #000000;
+    font-weight: bold;
+    background: linear-gradient(to top, #ffffff 50%, #000000 50%);
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    outline: 2px solid #000000;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 30px;
+    transition: background-position 0.5s;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    white-space: nowrap;
+    /* Ensure text stays in one line */
+}
+
+.fill-btn2 .btn-text2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fill-btn2 {
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: baseline;
+    letter-spacing: -0.5px;
+    word-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.fill-btn2 .hide2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fill-btn2:hover {
+    background-position: 0% 0%;
+}
+
+.fill-btn2:hover .btn-text {
+    opacity: 0;
+}
+
+.fill-btn2:hover .hide2 {
+    opacity: 1;
+}
+
+/* Main Content Styling - END */
+
+/* Footer Styling - START */
+#footerNameAndPosition {
+    margin-top: 10%;
+    margin-left: 22px;
+    padding: 22px;
+    /* font styling */
+    font-family: Inter;
+    font-size: 123px;
+    font-weight: 700;
+    text-align: left;
+    text-indent: 0px;
+    line-height: 110.7px;
+    letter-spacing: -4px;
+    word-spacing: 0px;
+}
+
+.footerContent {
+    display: flex;
+    margin-left: 22px;
+    padding-top: 40px;
+    padding: 22px;
+}
+
+#instagram,
+#dribbble,
+#goToTop {
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px;
+    vertical-align: baseline;
+    letter-spacing: -0.5px;
+    word-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    text-transform: none;
+    text-decoration: none solid #000000;
+    text-align: left;
+    text-indent: 0px;
+    position: relative;
+}
+
+#instagram::after,
+#dribbble::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #000000;
+    bottom: -8px;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+#instagram:hover::after,
+#dribbble:hover::after {
+    width: 100%;
+    transition: width 0.4s ease;
+    transform-origin: left;
+}
+
+.dribbble {
+    margin-left: 60px;
+}
+
+.goToTop {
+    margin-left: 1390px;
+    text-align: left;
+}
+
+/* Footer Styling - END */
